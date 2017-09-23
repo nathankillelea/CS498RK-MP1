@@ -1,0 +1,101 @@
+// ask can i use google fonts??
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+$font-stack-header: 'Oswald', Arial, Helvetica, sans-serif;
+$font-stack-paragraph: 'Open Sans', sans-serif;
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+// START NAVBAR - https://www.w3schools.com/css/css_navbar.asp
+ul {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: slategray;
+	list-style-type: none;
+	//overflow: hidden;
+}
+
+li {
+	float: left;
+	border-right: 1px solid white;
+}
+
+li a {
+	font-family: $font-stack-header;
+	font-size: 1.25em;
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 8px 24px;
+	text-align: center;
+}
+
+li a:hover {
+    background-color: #404040;
+}
+// END NAVBAR
+
+h3 {
+	font-family: $font-stack-header;
+	font-size: 2em;
+	padding-top: 28px;
+	text-align: center;
+}
+
+p {
+	font-family: $font-stack-paragraph;
+	font-size: 1em;
+}
+
+// footer help: https://stackoverflow.com/questions/7123138/how-to-make-this-header-content-footer-layout-using-css
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
+}
+
+footer {
+	background-color: IndianRed;
+	margin: 0;
+	padding: 0;
+	bottom: 0;
+	height: 45px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+i {
+	padding: 0em 0em 0em 1em;
+}
+
+// inspiration - https://stackoverflow.com/questions/20566660/3-column-layout-html-css
+.multi-column-container {
+	display: flex;
+}
+
+.multi-column-container div {
+	flex: 1;
+	text-align: center;
+}
+
+.column-two {
+	order: 2;
+}
+
+// inspiration - https://www.w3schools.com/w3css/w3css_slideshow.asp
+.Slides {
+	width: 20%;
+}
