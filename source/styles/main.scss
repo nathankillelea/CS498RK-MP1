@@ -11,6 +11,12 @@ html, body {
 }
 
 // START NAVBAR - https://www.w3schools.com/css/css_navbar.asp
+h2 {
+	font-family: $font-stack-header;
+	font-size: 1em;
+	float: left;
+}
+
 ul {
 	position: fixed;
 	top: 0;
@@ -20,7 +26,7 @@ ul {
 	width: 100%;
 	background-color: slategray;
 	list-style-type: none;
-	//overflow: hidden;
+	overflow: hidden;
 }
 
 li {
@@ -41,18 +47,26 @@ li a {
 li a:hover {
     background-color: #404040;
 }
+
 // END NAVBAR
 
-h3 {
+.under-header {
 	font-family: $font-stack-header;
 	font-size: 2em;
 	padding-top: 28px;
 	text-align: center;
 }
 
+h3 {
+	font-family: $font-stack-header;
+	font-size: 2em;
+	text-align: center;
+}
+
 p {
 	font-family: $font-stack-paragraph;
 	font-size: 1em;
+	text-align: center;
 }
 
 // footer help: https://stackoverflow.com/questions/7123138/how-to-make-this-header-content-footer-layout-using-css
@@ -95,7 +109,61 @@ i {
 	order: 2;
 }
 
+.column-three {
+	margin: auto;
+}
+
 // inspiration - https://www.w3schools.com/w3css/w3css_slideshow.asp
 .Slides {
 	width: 20%;
+	height: 20%;
+	display: block;
+	margin: auto;
+}
+
+.slides-container {
+	//display: flex;
+	//justify-content: center;
+	text-align: center;
+}
+
+.left-button { // ?????
+	//float: left;
+}
+
+.right-button {
+	//float: right;
+}
+
+.hackerman {
+	height: 25%;
+	width: 25%;
+	display: block;
+	margin: auto;
+}
+
+//modal
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content { // need to fuck w/ this so that itt is the same size as the img?? or idk wat im doin w/ it
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hackerzoom {
+	height: 40%;
+	width: 40%;
+	transform: translateY(25%);
+	margin: 0;
 }
