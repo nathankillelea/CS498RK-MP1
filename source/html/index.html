@@ -4,64 +4,87 @@
 	<meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://use.fontawesome.com/59f1e58861.js"></script>
     <title>MP1 Starter</title>
 </head>
 
 <body>
-	<div class="wrapper">
-		<header class="large">
+	<header id="header">
+		<div class="container">
+			<div class="logo" id="logo">
+				<h1>Champaign County Pet Rescue</h1>
+				<i class="fa fa-paw fa-3x" aria-hidden="true"></i>
+			</div>
 			<nav>
-				<h2 id="logo">Champaign County Pet Rescue</h2>
-			    <ul>
-					<li><a href="#home">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-			    </ul>
+				<ul>
+					<li><p id="about">About</p></li>
+					<li><p id="adoption">Adoption</p></li>
+					<li><p id="contact">Contact</p></li>
+				</ul>
 			</nav>
-		</header>
-		<main>
-			<h3 class="under-header">Nathan Killelea</h3>
-			<p>Elite hackerman</p>
-			<!-- IMAGES FROM: https://www.pexels.com/ -->
+		</div>
+	</header>
+	<main>
+		<h3 class="under-header" id="start">Our Mission</h3>
+		<!-- Pictures+video from: https://www.facebook.com/PetProjectInc/ -->
+		<div class="multi-column-container">
+			<div class="column-one">
+				<h3>Rescue</h3>
+				<img class="mission-logos" src="/assets/rescue_logo.jpg"/>
+				<p>Our aim is to rescue abandoned and unwanted pets and place them into permanent, loving homes. Champaign County Pet Rescue is a no-kill shelter. We keep our pets until we have found them their forever homes.</p>
+			</div>
+			<div class="column-two">
+				<h3>Spay & Neuter</h3>
+				<img class="mission-logos" src="/assets/spay_logo.jpg"/>
+				<p>We spay and neuter all of our animals which helps reduce the population of stray animals that can devastate local ecosystems and kill off populations of birds.</p>
+			</div>
+			<div class="column-three">
+				<h3>Adopt</h3>
+				<img class="mission-logos" src="/assets/adopt_logo.jpg"/>
+				<p>All of our animals are waiting to go to their forever homes. There is a flat fee of $100 to adopt. No animal is unwanted. We hope that you can help make their dreams a reality.</p>
+			</div>
+		</div>
+		<div id="adoption-loc">
+			<h3 id="adoption-formatting">Available for Adoption</h3>
 			<div class="slides-container">
-				<img class="Slides" src="/assets/code.jpeg"/>
-				<img class="Slides" src="/assets/elite_hacker.jpeg"/>
-				<img class="Slides" src="/assets/epic_code.png"/>
 				<button class="left-button" id="left_button">&#10094;</button>
+				<img class="Slides" id="jada" src="/assets/jada.jpg"/>
+				<img class="Slides" id="storm" src="/assets/storm_res.jpg"/>
+				<img class="Slides" id="jack" src="/assets/jack_res.png"/>
 				<button class="right-button" id="right_button">&#10095;</button>
 			</div>
-			<h3>The Ultimate Meme</h3>
-			<div class="multi-column-container">
-				<div class="column-one"<p>egg roll</p></div>
-				<div class="column-two"<p>sushi potato</p></div>
-				<div class="column-three"<p>idiot</p></div>
+		</div>
+		<div class="modal" id="modal">
+			<div class="modal-content">
+				<h3>Meet Jada</h3>
+				<span class="close-button" id="close-button">&times;</span> <!-- add LATER -->
+				<!--https://www.w3schools.com/TAgs/tag_video.asp-->
+				<video id="jada-vid" controls>
+					<source src="/assets/Jada_Lobby.mp4" type="video/mp4">
+					Your browser does not support this video tag.
+				</video>
+				<p>Jada is a five year old female tuxedo cat. She would do best in a home with no other cats, but she loves people and would be fine around children. She loves to be held and cuddled. When she is not sleeping, she likes to play with her toy mouse.</p>
 			</div>
-			<h3>content</h3>
-			<img class="hackerman" id="hackerman" src="/assets/hackerman.png"/>
-			<div class="modal" id="modal">
-				<div class="modal-content">
-					<span class="close-button">&times;</span> <!-- add LATER -->
-					<img class="hackerzoom" src="/assets/hackerman.png"/>
+		</div>
+		<div id="contact-loc">
+			<h3 id="contact-formatting">Contact Us and Adopt a Pet Today!</h3>
+			<!--http://tangledindesign.com/how-to-create-a-contact-form-using-html5-css3-and-php/-->
+			<form>
+				<div class="contact-container">
+				    <input type="text" name="first-name" placeholder="First Name">
+				    <input type="text" name="last-name" placeholder="Last Name">
+				    <input type="text" name="email" placeholder="Email">
+				    <textarea name="message" placeholder="Additional Information"></textarea>
+				    <input id="submit" name="submit" type="submit" value="Submit">
 				</div>
-			</div>
-			<h3>content</h3>
-			<h3>content</h3>
-			<h3>content</h3>
-			<h3>content</h3>
-			<h3>content</h3>
-			<h3>content</h3>
-			<h3>content</h3>
-			<h3>content</h3>
-			<h3>content</h3>
-			<h3>content</h3>
-		</main>
-		<footer>
-			<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
-			<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
-		</footer>
-	</div>
-
+			</form>
+			<div class="background-image"></div>
+		</div>
+	</main>
+	<footer>
+		<i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+		<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+	</footer>
     <script src="bundle.js" type="text/javascript"></script>
 </body>
 

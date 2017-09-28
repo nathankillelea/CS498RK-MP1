@@ -4,57 +4,101 @@
 $font-stack-header: 'Oswald', Arial, Helvetica, sans-serif;
 $font-stack-paragraph: 'Open Sans', sans-serif;
 
-html, body {
-	height: 100%;
+* {
 	margin: 0;
 	padding: 0;
+}
+
+html, body {
+	height: 100%;
 }
 
 // START NAVBAR - https://www.w3schools.com/css/css_navbar.asp
-h2 {
+#header {
+	height: 150px;
+	width: 100%;
+	position: fixed;
+	background: #01395E; //#73AD64
+	top: 0;
+	left: 0;
+	transition: all 0.3s;
+}
+
+.container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.logo {
 	font-family: $font-stack-header;
-	font-size: 1em;
-	float: left;
+	height: 100%;
+	width: 75%;
+	display: flex;
+	align-items: center;
+	color: #fff;
+}
+
+#logo {
+	font-size: 1.50em;
+	padding-left: .5em;
+	transition: all 0.3s;
+}
+
+.fa-paw {
+	padding-left: .25em;
+	color: white;
+}
+
+nav {
+	width: 25%;
+	height: 100%;
 }
 
 ul {
-	position: fixed;
-	top: 0;
-	left: 0;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	background-color: slategray;
-	list-style-type: none;
-	overflow: hidden;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	//transition: all 750ms ease;
 }
 
 li {
-	float: left;
-	border-right: 1px solid white;
-}
-
-li a {
+	list-style: none;
 	font-family: $font-stack-header;
-	font-size: 1.25em;
-	display: block;
-	color: white;
+	font-size: 1.5em;
+	display: flex;
+	padding-right: 35px;
+}
+
+#about, #adoption, #contact {
 	text-decoration: none;
-	padding: 8px 24px;
-	text-align: center;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	font-family: $font-stack-header;
+}
+//https://stackoverflow.com/questions/14071652/css-hover-event-not-working-after-using-javascript
+#about:hover, #adoption:hover, #contact:hover {
+	color: black !important; //#404040
+	cursor: pointer;
 }
 
-li a:hover {
-    background-color: #404040;
-}
-
-// END NAVBAR
+// end navbar
 
 .under-header {
 	font-family: $font-stack-header;
-	font-size: 2em;
-	padding-top: 28px;
+	padding-top: 235px; //150 before
 	text-align: center;
+}
+
+#start {
+	font-size: 2.5em;
+	padding-bottom: 20px; //15px before
+}
+
+.multi-column-container p {
+	padding-bottom: 115px;
 }
 
 h3 {
@@ -67,32 +111,21 @@ p {
 	font-family: $font-stack-paragraph;
 	font-size: 1em;
 	text-align: center;
-}
-
-// footer help: https://stackoverflow.com/questions/7123138/how-to-make-this-header-content-footer-layout-using-css
-.wrapper {
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
+	padding: 5px 25px 20px 25px;
 }
 
 main {
 	flex: 1;
-}
-
-footer {
-	background-color: IndianRed;
-	margin: 0;
-	padding: 0;
-	bottom: 0;
-	height: 45px;
-	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 }
 
-i {
-	padding: 0em 0em 0em 1em;
+.background-image {
+	height: 450px;
+	width: 100%;
+	background-image: url(https://s3.amazonaws.com/systemimage/40415982_Subscription_S.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 // inspiration - https://stackoverflow.com/questions/20566660/3-column-layout-html-css
@@ -103,43 +136,83 @@ i {
 .multi-column-container div {
 	flex: 1;
 	text-align: center;
+	width: 33.33%;
+	height: 100%;
 }
 
-.column-two {
-	order: 2;
+.mission-logos {
+	height: 33%;
+	width: 33%;
+	padding: 16px;
 }
 
-.column-three {
-	margin: auto;
+// make image not draggable https://stackoverflow.com/questions/12906789/preventing-an-image-from-being-draggable-or-selectable-without-using-js
+img.mission-logos {
+	user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 
 // inspiration - https://www.w3schools.com/w3css/w3css_slideshow.asp
-.Slides {
-	width: 20%;
-	height: 20%;
-	display: block;
-	margin: auto;
-}
-
 .slides-container {
-	//display: flex;
-	//justify-content: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 }
 
-.left-button { // ?????
-	//float: left;
+div#adoption-loc {
+	background-color: #D5D5D5;
 }
 
-.right-button {
-	//float: right;
+button {
+	height: 50px;
+	width: 50px;
+	background-color: #D5D5D5;
+	color: black;
+	text-decoration: none;
+	border: none;
+	font-size: 35px;
 }
 
-.hackerman {
-	height: 25%;
-	width: 25%;
-	display: block;
-	margin: auto;
+button:hover {
+	color: white;
+	background: #404040;
+	cursor: pointer;
+}
+//https://stackoverflow.com/questions/20340138/remove-blue-border-from-css-custom-styled-button-in-chrome
+button:focus {
+	outline:0;
+}
+
+.Slides {
+	width: 65%;
+	height: 65%;
+	//transition: all 0.3s; // ?????
+}
+
+#jada:hover {
+	cursor: pointer;
+}
+
+div#adoption-loc {
+	padding-top: 85px;
+	padding-bottom: 115px;
+}
+
+#adoption-formatting {
+	//padding-top: 75px;
+	padding-bottom: 40px;
+	font-size: 2.5em;
+}
+
+#contact-formatting {
+	//padding-top: 75px;
+	padding-bottom: 25px;
+	font-size: 2.5em;
 }
 
 //modal
@@ -152,18 +225,91 @@ i {
 	height: 100%;
 	width: 100%;
 	overflow: auto;
-	background-color: rgba(0,0,0,0.6);
-}
-
-.modal-content { // need to fuck w/ this so that itt is the same size as the img?? or idk wat im doin w/ it
-	display: flex;
+	background-color: rgba(0,0,0,0.85);
 	justify-content: center;
 	align-items: center;
 }
 
-.hackerzoom {
-	height: 40%;
-	width: 40%;
-	transform: translateY(25%);
-	margin: 0;
+.modal-content {
+	position: relative;
+	display: block;
+	height: 540px; //640
+	width: 760px;
+	background-color: white;
+	border-radius: 15px;
+}
+
+.modal-content h3 {
+	padding-top: 10px;
+}
+
+video {
+	display: block;
+	margin: auto;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.close-button {
+	position: absolute;
+	font-size: 48px;
+	padding-right: 10px;
+	padding-top: 0px;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+}
+
+//contact form
+#contact-loc {
+	padding-top: 85px;
+}
+
+form {
+	padding-bottom: 80px;
+}
+
+input, textarea {
+	display: flex;
+	width: 500px;
+	margin: 12px auto;
+	font-family: $font-stack-paragraph;
+}
+
+input[type=text], textarea {
+	box-sizing: border-box;
+	padding: 8px 4px;
+}
+
+input[type=submit] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	width: 500px;
+	height: 40px;
+}
+
+textarea {
+	height: 150px;
+	resize: none;
+}
+
+//footer
+footer {
+	background-color: #747474;
+	left: 0;
+	height: 45px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.fa-facebook-official {
+	padding: 0em 0em 0em .5em;
+	color: #fff; //#3b5998
+}
+.fa-twitter {
+	padding: 0em 0em 0em .75em;
+	color: #fff; //#00aced
 }
