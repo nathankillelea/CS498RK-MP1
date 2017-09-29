@@ -1,4 +1,3 @@
-// ask can i use google fonts??
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 $font-stack-header: 'Oswald', Arial, Helvetica, sans-serif;
@@ -82,12 +81,11 @@ li {
 	font-family: $font-stack-header;
 }
 
-//https://stackoverflow.com/questions/14071652/css-hover-event-not-working-after-using-javascript
+// https://stackoverflow.com/questions/14071652/css-hover-event-not-working-after-using-javascript
 #about:hover, #adoption:hover, #contact:hover {
 	color: black !important; //#404040
 	cursor: pointer;
 }
-// end navbar
 
 .under-header {
 	font-family: $font-stack-header;
@@ -123,16 +121,10 @@ main {
 	align-items: center;
 }
 
-.background-image {
-	height: 450px;
-	width: 100%;
-	background-image: url(https://s3.amazonaws.com/systemimage/40415982_Subscription_S.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
+// https://stackoverflow.com/questions/20872806/how-do-you-scroll-the-page-content-over-a-cover-image-like-medium-com
+// http://coachellapetrescuecenter.org/wp-content/uploads/2014/04/PetRescueCenter_cropped.jpg
 #background-image {
-	background-image: url("http://coachellapetrescuecenter.org/wp-content/uploads/2014/04/PetRescueCenter_cropped.jpg");
+	background-image: url("assets/dog_background.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
     background-size: cover;
@@ -147,6 +139,15 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+// https://s3.amazonaws.com/systemimage/40415982_Subscription_S.jpg
+.background-image {
+	height: 450px;
+	width: 100%;
+	background-image: url("assets/many_dogs.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 // https://stackoverflow.com/questions/20566660/3-column-layout-html-css
@@ -205,7 +206,7 @@ button:hover {
 	cursor: pointer;
 }
 
-//https://stackoverflow.com/questions/20340138/remove-blue-border-from-css-custom-styled-button-in-chrome
+// https://stackoverflow.com/questions/20340138/remove-blue-border-from-css-custom-styled-button-in-chrome
 button:focus {
 	outline:0;
 }
@@ -234,7 +235,7 @@ div#adoption-loc {
 	font-size: 2.5em;
 }
 
-//modal
+// modal
 .modal {
 	display: none;
 	position: fixed;
@@ -279,7 +280,7 @@ video {
 	cursor: pointer;
 }
 
-//contact form
+// contact form
 #contact-loc {
 	padding-top: 85px;
 }
@@ -314,7 +315,7 @@ textarea {
 	resize: none;
 }
 
-//footer
+// footer
 footer {
 	background-color: #747474;
 	left: 0;

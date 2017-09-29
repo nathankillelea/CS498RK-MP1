@@ -64,9 +64,6 @@ function shrinkNavbar(){
 	}
 }
 
-//smooth scroll - https://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click THIS ONE WORKS IF NEEDED
-
-
 // highlight menu based on position - https://stackoverflow.com/questions/288699/get-the-position-of-a-div-span-tag
 window.addEventListener("scroll", highlight);
 
