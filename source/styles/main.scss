@@ -216,7 +216,7 @@ button:focus {
 	height: 65%;
 }
 
-#jada:hover {
+#jada:hover, #storm:hover, #jack:hover {
 	cursor: pointer;
 }
 
@@ -236,7 +236,7 @@ div#adoption-loc {
 }
 
 // modal
-.modal {
+.modal1, .modal2, .modal3 {
 	display: none;
 	position: fixed;
 	z-index: 1;
@@ -250,16 +250,27 @@ div#adoption-loc {
 	align-items: center;
 }
 
-.modal-content {
+.modal-content1, .modal-content2, .modal-content3 {
 	position: relative;
 	display: block;
-	height: 540px;
 	width: 760px;
 	background-color: white;
 	border-radius: 15px;
 }
 
-.modal-content h3 {
+.modal-content1 {
+	height: 620px;
+}
+
+.modal-content2 {
+	height: 680px;
+}
+
+.modal-content3 {
+	height: 575px;
+}
+
+.modal-content1, .modal-content2, .modal-content3 h3 {
 	padding-top: 10px;
 }
 
@@ -270,7 +281,7 @@ video {
 	padding-bottom: 15px;
 }
 
-.close-button {
+.close-button1, .close-button2, .close-button3 {
 	position: absolute;
 	font-size: 48px;
 	padding-right: 10px;

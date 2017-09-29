@@ -27,23 +27,51 @@ function showDivs(n) {
 }
 
 // modal duder - https://www.youtube.com/watch?v=6ophW7Ask_0
-var modal = document.getElementById("modal");
-var modalOpener = document.getElementById("jada");
+var modal1 = document.getElementById("modal1");
+var modalOpener1 = document.getElementById("jada");
+var modal2 = document.getElementById("modal2");
+var modalOpener2 = document.getElementById("storm");
+var modal3 = document.getElementById("modal3");
+var modalOpener3 = document.getElementById("jack");
 
-modalOpener.onclick = function(){
-	modal.style.display = "flex";
+modalOpener1.onclick = function(){
+	modal1.style.display = "flex";
+}
+modalOpener2.onclick = function(){
+	modal2.style.display = "flex";
+}
+modalOpener3.onclick = function(){
+	modal3.style.display = "flex";
 }
 
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == modal1) {
+        modal1.style.display = "none";
 		document.getElementById("jada-vid").pause();
     }
+	if(event.target == modal2) {
+		modal2.style.display = "none";
+		document.getElementById("storm-vid").pause();
+	}
+	if(event.target == modal3) {
+		modal3.style.display = "none";
+		document.getElementById("tallulah-vid").pause();
+	}
 }
 
-document.getElementById("close-button").onclick = function() {
-	modal.style.display = "none";
+document.getElementById("close-button1").onclick = function() {
+	modal1.style.display = "none";
 	document.getElementById("jada-vid").pause();
+}
+
+document.getElementById("close-button2").onclick = function() {
+	modal2.style.display = "none";
+	document.getElementById("storm-vid").pause();
+}
+
+document.getElementById("close-button3").onclick = function() {
+	modal3.style.display = "none";
+	document.getElementById("tallulah-vid").pause();
 }
 
 // smaller scroll - https://www.youtube.com/watch?v=MilW6gVPYJM
