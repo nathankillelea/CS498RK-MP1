@@ -1,28 +1,28 @@
 // https://www.w3schools.com/w3css/w3css_slideshow.asp
 var index = 1;
-showDivs(index);
+showSlides(index);
 
-document.getElementById("left_button").onclick = function(){plusDivs(-1)}
-document.getElementById("right_button").onclick = function(){plusDivs(+1)}
+document.getElementById("left_button").onclick = function(){addSlides(-1);};
+document.getElementById("right_button").onclick = function(){addSlides(+1);};
 
-function plusDivs(n) {
-	showDivs(index += n);
+function addSlides(n) {
+	showSlides(index += n);
 }
 
-function showDivs(n) {
+function showSlides(n) {
     var i;
-    var x = document.getElementsByClassName("Slides");
-    if (n > x.length) {
+    var slides = document.getElementsByClassName("Slides");
+    if (n > slides.length) {
 		index = 1;
 	}
     if (n < 1) {
-		index = x.length;
+		index = slides.length;
 	}
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
 		//x[i].style.visibility = "hidden";
     }
-    x[index-1].style.display = "block";
+    slides[index-1].style.display = "block";
 	//x[index-1].style.display = "visible";
 }
 
@@ -34,15 +34,15 @@ var modalOpener2 = document.getElementById("storm");
 var modal3 = document.getElementById("modal3");
 var modalOpener3 = document.getElementById("jack");
 
-modalOpener1.onclick = function(){
+modalOpener1.onclick = function() {
 	modal1.style.display = "flex";
-}
-modalOpener2.onclick = function(){
+};
+modalOpener2.onclick = function() {
 	modal2.style.display = "flex";
-}
-modalOpener3.onclick = function(){
+};
+modalOpener3.onclick = function() {
 	modal3.style.display = "flex";
-}
+};
 
 window.onclick = function(event) {
     if (event.target == modal1) {
@@ -57,22 +57,22 @@ window.onclick = function(event) {
 		modal3.style.display = "none";
 		document.getElementById("tallulah-vid").pause();
 	}
-}
+};
 
 document.getElementById("close-button1").onclick = function() {
 	modal1.style.display = "none";
 	document.getElementById("jada-vid").pause();
-}
+};
 
 document.getElementById("close-button2").onclick = function() {
 	modal2.style.display = "none";
 	document.getElementById("storm-vid").pause();
-}
+};
 
 document.getElementById("close-button3").onclick = function() {
 	modal3.style.display = "none";
 	document.getElementById("tallulah-vid").pause();
-}
+};
 
 // smaller scroll - https://www.youtube.com/watch?v=MilW6gVPYJM
 window.addEventListener("scroll", shrinkNavbar);
@@ -95,7 +95,7 @@ function shrinkNavbar(){
 // highlight menu based on position - https://stackoverflow.com/questions/288699/get-the-position-of-a-div-span-tag
 window.addEventListener("scroll", highlight);
 
-function highlight(){
+function highlight() {
 	var about_rect = document.getElementById("start").getBoundingClientRect();
 	var about_position = {
 	  top: about_rect.top + window.pageYOffset,
@@ -148,7 +148,7 @@ document.getElementById("about").onclick = function() {
 			if(window.pageYOffset == about_position.top) clearInterval(stopVar);
 		}, 10);
 	}
-}
+};
 
 document.getElementById("adoption").onclick = function() {
 	var adoption_rect = document.getElementById("adoption-loc").getBoundingClientRect();
@@ -173,7 +173,7 @@ document.getElementById("adoption").onclick = function() {
 			if(window.pageYOffset >= adoption_position.top) clearInterval(stopVar);
 		}, 10);
 	}
-}
+};
 
 document.getElementById("contact").onclick = function() {
 	var contact_rect = document.getElementById("contact-loc").getBoundingClientRect();
@@ -198,4 +198,4 @@ document.getElementById("contact").onclick = function() {
 			if(window.pageYOffset >= contact_position.top) clearInterval(stopVar);
 		}, 10);
 	}
-}
+};
