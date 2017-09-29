@@ -18,7 +18,7 @@ html, body {
 	height: 150px;
 	width: 100%;
 	position: fixed;
-	background: #01395E; //#73AD64
+	background: #01395E;
 	top: 0;
 	left: 0;
 	transition: all 0.3s;
@@ -60,7 +60,6 @@ ul {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	//transition: all 750ms ease;
 }
 
 li {
@@ -78,23 +77,23 @@ li {
 	padding: 0;
 	font-family: $font-stack-header;
 }
+
 //https://stackoverflow.com/questions/14071652/css-hover-event-not-working-after-using-javascript
 #about:hover, #adoption:hover, #contact:hover {
 	color: black !important; //#404040
 	cursor: pointer;
 }
-
 // end navbar
 
 .under-header {
 	font-family: $font-stack-header;
-	padding-top: 235px; //150 before
+	padding-top: 235px;
 	text-align: center;
 }
 
 #start {
 	font-size: 2.5em;
-	padding-bottom: 20px; //15px before
+	padding-bottom: 20px;
 }
 
 .multi-column-container p {
@@ -128,7 +127,7 @@ main {
 	background-position: center;
 }
 
-// inspiration - https://stackoverflow.com/questions/20566660/3-column-layout-html-css
+// https://stackoverflow.com/questions/20566660/3-column-layout-html-css
 .multi-column-container {
 	display: flex;
 }
@@ -141,12 +140,12 @@ main {
 }
 
 .mission-logos {
-	height: 33%;
-	width: 33%;
+	height: 200px;
+	width: 200px;
 	padding: 16px;
 }
 
-// make image not draggable https://stackoverflow.com/questions/12906789/preventing-an-image-from-being-draggable-or-selectable-without-using-js
+// https://stackoverflow.com/questions/12906789/preventing-an-image-from-being-draggable-or-selectable-without-using-js
 img.mission-logos {
 	user-drag: none;
 	user-select: none;
@@ -156,7 +155,7 @@ img.mission-logos {
 	-ms-user-select: none;
 }
 
-// inspiration - https://www.w3schools.com/w3css/w3css_slideshow.asp
+// https://www.w3schools.com/w3css/w3css_slideshow.asp
 .slides-container {
 	display: flex;
 	justify-content: center;
@@ -183,6 +182,7 @@ button:hover {
 	background: #404040;
 	cursor: pointer;
 }
+
 //https://stackoverflow.com/questions/20340138/remove-blue-border-from-css-custom-styled-button-in-chrome
 button:focus {
 	outline:0;
@@ -191,7 +191,6 @@ button:focus {
 .Slides {
 	width: 65%;
 	height: 65%;
-	//transition: all 0.3s; // ?????
 }
 
 #jada:hover {
@@ -204,13 +203,11 @@ div#adoption-loc {
 }
 
 #adoption-formatting {
-	//padding-top: 75px;
 	padding-bottom: 40px;
 	font-size: 2.5em;
 }
 
 #contact-formatting {
-	//padding-top: 75px;
 	padding-bottom: 25px;
 	font-size: 2.5em;
 }
@@ -233,7 +230,7 @@ div#adoption-loc {
 .modal-content {
 	position: relative;
 	display: block;
-	height: 540px; //640
+	height: 540px;
 	width: 760px;
 	background-color: white;
 	border-radius: 15px;
@@ -307,9 +304,9 @@ footer {
 
 .fa-facebook-official {
 	padding: 0em 0em 0em .5em;
-	color: #fff; //#3b5998
+	color: #fff;
 }
 .fa-twitter {
 	padding: 0em 0em 0em .75em;
-	color: #fff; //#00aced
+	color: #fff;
 }
