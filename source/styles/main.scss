@@ -13,6 +13,10 @@ html, body {
 	height: 100%;
 }
 
+body {
+	background-color: #fff;
+}
+
 // START NAVBAR - https://www.w3schools.com/css/css_navbar.asp
 #header {
 	height: 150px;
@@ -125,6 +129,24 @@ main {
 	background-image: url(https://s3.amazonaws.com/systemimage/40415982_Subscription_S.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+#background-image {
+	background-image: url("http://coachellapetrescuecenter.org/wp-content/uploads/2014/04/PetRescueCenter_cropped.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+    background-size: cover;
+	background-attachment: fixed;
+    height: 800px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+	font-size: 4em;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 // https://stackoverflow.com/questions/20566660/3-column-layout-html-css
