@@ -211,6 +211,11 @@ button:focus {
 	outline:0;
 }
 
+// https://stackoverflow.com/questions/71074/how-to-remove-firefoxs-dotted-outline-on-buttons-as-well-as-links
+button::-moz-focus-inner {
+  border: 0;
+}
+
 .Slides {
 	width: 65%;
 	height: 65%;
